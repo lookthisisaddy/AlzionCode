@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 400px;
+    border: 1px solid black;
+    max-height: 600px;
+    overflow: scroll;
+}
+
+.card {
+    display:flex;
+    align-items: start;
+    justify-content: space-between;
+    padding: 2rem;
+    width: 400px;
+    display: flex;
+    height: 100%;
+    border: 1px solid red; 
+    margin: 0.5rem 0;  
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.card img {
+    width: 120px;
+    position: sticky;
+    top: 0;
+    right: 0;
+}
