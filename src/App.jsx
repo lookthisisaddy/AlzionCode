@@ -6,7 +6,6 @@ import DetailedList from "./Components/DetailedList";
 
 const App = () => {
   const [list, setList] = useState([]);
-  const [clickedIndex, setClickedIndex] = useState(0);
 
   const fetchProducts = async () => {
     const response = await fetch(
@@ -18,18 +17,16 @@ const App = () => {
 
   useEffect(() => {
     fetchProducts();
-  }, []);
-
-  
+  }, []);  
 
   return (
     <div className="main-container">
       <AppContext.Provider value={{list, setList}}>
         <div className="container">
-          <BrowserRouter>
+          <BrowserRouter>     
             <Routes>
-              <Route path="/" element={<List list={list}/>} />
-              <Route path="/product:productId" element={<DetailedList />} />
+            <Route path="/" element={<List />} />
+              <Route path="/product/:productId" element={<DetailedList />} />
             </Routes>
           </BrowserRouter>
         </div>
